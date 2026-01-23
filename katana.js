@@ -51,7 +51,7 @@
                 ($$itemStackFromBlockWithMeta(ModAPI.blocks[$$resultItemArg.replace("block/", "").split("@")[0]].getRef(),1,$$resultItemArg.replace("block/", "").split("@")[1] || 0))
                 : ($$itemStackFromItem(ModAPI.items[$$resultItemArg.replace("item/", "")].getRef(), 1));
             
-            (function ($$itemstack) {})($$resultItem);
+            (function (__efb2_arg_itemstack) {var __efb2_arg_itemstack;  (__efb2_arg_itemstack).$addEnchantment(ModAPI.enchantments["sharpness"].getRef(), (20));(__efb2_arg_itemstack).$addEnchantment(ModAPI.enchantments["smite"].getRef(), (20));(__efb2_arg_itemstack).$addEnchantment(ModAPI.enchantments["looting"].getRef(), (20));(__efb2_arg_itemstack).$addEnchantment(ModAPI.enchantments["unbreaking"].getRef(), (1e+21));})($$resultItem);
             
             var $$craftingManager = ModAPI.reflect.getClassById("net.minecraft.item.crafting.CraftingManager").staticMethods.getInstance.method();
             ModAPI.hooks.methods.nmic_CraftingManager_addRecipe($$craftingManager, $$resultItem, $$recipe);
